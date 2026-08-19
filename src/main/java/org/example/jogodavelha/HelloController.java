@@ -20,7 +20,7 @@ public class HelloController {
         Button certo = (Button) evento.getSource();
         int[] posicao = new int[2];
         for (int i = 0; i < botaos.length; i++) {
-            for (int j = 0.j < botaos.length; j++){
+            for (int j = 0;j < botaos.length; j++){
                 if (botaos[i][j] == certo){
                     posicao[0] = i;
                     posicao[1] = j;
