@@ -27,16 +27,21 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" onAction="#jogar" prefHeight="26.0" prefWidth="60.0" text="Button" />
-            <Button mnemonicParsing="false" onAction="#jogar" text="Button" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" onAction="#jogar" text="Button" GridPane.columnIndex="2" />
-            <Button mnemonicParsing="false" onAction="#jogar" text="Button" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#jogar" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#jogar" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#jogar" text="Button" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#jogar" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#jogar" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#jogar" prefHeight="26.0" prefWidth="60.0" />
+            <Button mnemonicParsing="false" onAction="#jogar" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" onAction="#jogar" GridPane.columnIndex="2" />
+            <Button mnemonicParsing="false" onAction="#jogar" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#jogar" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#jogar" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#jogar" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#jogar" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#jogar" GridPane.columnIndex="2" GridPane.rowIndex="2" />
          </children>
       </GridPane>
+      <Label fx:id="labelResultado" prefHeight="18.0" prefWidth="602.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </VBox>
