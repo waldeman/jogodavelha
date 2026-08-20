@@ -1,11 +1,13 @@
 package org.example.jogodavelha;
 
+import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import javafx.util.Duration;
 
 public class HelloController {
     @FXML
@@ -14,6 +16,7 @@ public class HelloController {
     private Label labelResultado;
     private Button[][] botaos = new Button[3][3];
     private String jogada;
+    private PauseTransition pausa = new PauseTransition(Duration.seconds(5));
 
     @FXML
     public void initialize() {
@@ -42,10 +45,22 @@ public class HelloController {
         if (isVazia(botaos, pos)) {
             botaos[pos[0]][pos[1]].setText(jogada);
             if (ganhou()) {
+                desativarBotao();
                 labelResultado.setText(jogador() + " ganhou!");
+                pausa.setOnFinished(event1 -> {
+                    reiniciar();
+                });
+                pausa.play();
+                return;
             }
             if (isVelha()) {
+                desativarBotao();
                 labelResultado.setText("Deu velha");
+                pausa.setOnFinished(event1 -> {
+                    reiniciar();
+                });
+                pausa.play();
+                return;
             }
             alternarJogada();
         } else {
@@ -54,7 +69,15 @@ public class HelloController {
 
 
     }
-
+    public void reiniciar(){
+        this.jogada = "X";
+        for (Button[] i : this.botaos) {
+            for (Button b : i) {
+                b.setText("");
+                b.setDisable(false);
+            }
+        }
+    }
     public boolean isVelha() {
         for (Button[] i : this.botaos) {
             for (Button j : i) {
@@ -118,5 +141,12 @@ public class HelloController {
             }
         }
         return posicao;
+    }
+    public void desativarBotao(){
+        for (Button[] i : botaos) {
+            for (Button b : i) {
+                b.setDisable(true);
+            }
+        }
     }
 }
