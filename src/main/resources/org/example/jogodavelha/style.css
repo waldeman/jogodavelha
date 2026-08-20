@@ -8,6 +8,8 @@
     -fx-alignment:center;
 }
 .button{
+    -fx-pref-height:200px;
+    -fx-pref-width:200px;
     -fx-font-family:SansSerif;
     -fx-font-size: 48px;
     -fx-background-color: black;
