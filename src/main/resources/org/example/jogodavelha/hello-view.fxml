@@ -10,7 +10,7 @@
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="15.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.jogodavelha.HelloController">
    <children>
-      <Label text="Jogo da Velha">
+      <Label fx:id="labelTitulo" text="Jogo da Velha">
          <font>
             <Font size="36.0" />
          </font>
@@ -27,15 +27,15 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" onAction="#jogar" prefHeight="101.0" prefWidth="200.0" />
-            <Button mnemonicParsing="false" onAction="#jogar" prefHeight="98.0" prefWidth="200.0" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" onAction="#jogar" prefHeight="104.0" prefWidth="200.0" GridPane.columnIndex="2" />
-            <Button mnemonicParsing="false" onAction="#jogar" prefHeight="109.0" prefWidth="200.0" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#jogar" prefHeight="110.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#jogar" prefHeight="110.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#jogar" prefHeight="164.0" prefWidth="200.0" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#jogar" prefHeight="125.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#jogar" prefHeight="124.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#jogar" styleClass="esquerda-cima" />
+            <Button mnemonicParsing="false" onAction="#jogar" styleClass="cima-meio" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" onAction="#jogar" styleClass="direita-cima" GridPane.columnIndex="2" />
+            <Button mnemonicParsing="false" onAction="#jogar" styleClass="esquerda-meio" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#jogar" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#jogar" styleClass="direita-meio" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#jogar" styleClass="esquerda-baixo" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#jogar" styleClass="baixo-meio" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#jogar" styleClass="direita-baixo" GridPane.columnIndex="2" GridPane.rowIndex="2" />
          </children>
       </GridPane>
       <Label fx:id="labelResultado" prefHeight="18.0" prefWidth="602.0">

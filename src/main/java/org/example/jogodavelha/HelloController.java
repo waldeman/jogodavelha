@@ -44,6 +44,13 @@ public class HelloController {
 
         if (isVazia(botaos, pos)) {
             botaos[pos[0]][pos[1]].setText(jogada);
+            botaos[pos[0]][pos[1]].getStyleClass().removeAll("X", "O");
+            if (jogada.equals("X")) {
+                botaos[pos[0]][pos[1]].getStyleClass().add("X");
+            } else {
+                botaos[pos[0]][pos[1]].getStyleClass().add("O");
+            }
+
             if (ganhou()) {
                 desativarBotao();
                 labelResultado.setText(jogador() + " ganhou!");
@@ -77,6 +84,7 @@ public class HelloController {
                 b.setDisable(false);
             }
         }
+        labelResultado.setText("");
     }
     public boolean isVelha() {
         for (Button[] i : this.botaos) {
