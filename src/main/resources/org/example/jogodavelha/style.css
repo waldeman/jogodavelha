@@ -1,0 +1,59 @@
+.root{
+    -fx-background-color: black;
+}
+.label{
+    -fx-font-family: SansSerif;
+    -fx-font-size: 24px;
+    -fx-text-fill:white;
+    -fx-alignment:center;
+}
+#labelTitulo{
+    -fx-padding:0px 0px 100px 0px ;
+}
+#labelResultado{
+    -fx-padding:50px 0px 0px 0px ;
+}
+.button{
+    -fx-pref-height:200px;
+    -fx-pref-width:200px;
+    -fx-font-family:SansSerif;
+    -fx-font-size: 64px;
+    -fx-background-color: black;
+    -fx-border-width: 3px;
+    -fx-border-color:white;
+    -fx-alignment:CENTER;
+
+}
+.esquerda-cima{
+    -fx-border-width: 0px 0px 0px 0px;
+}
+.cima-meio{
+    -fx-border-width: 0px 3px 0px 3px;
+}
+.direita-cima{
+    -fx-border-width: 0px 0px 0px 0px;
+}
+.esquerda-meio{
+    -fx-border-width: 3px 0px 0px 0px;
+}
+.direita-meio{
+    -fx-border-width: 3px 0px 0px 0px;
+}
+.esquerda-baixo{
+    -fx-border-width: 3px 0px 0px 0px;
+}
+.baixo-meio{
+    -fx-border-width: 3px 3px 0px 3px;
+}
+.direita-baixo{
+    -fx-border-width: 3px 0px 0px 0px;
+}
+.X{
+    -fx-text-fill: #107054;
+    -fx-font-weight:bold;
+}
+.O{
+    -fx-text-fill: #9f220a;
+    -fx-font-weight:bold;
+
+}
